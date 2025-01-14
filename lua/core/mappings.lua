@@ -75,7 +75,7 @@ vim.keymap.set("n", "<Leader>la", '<Cmd>lua vim.lsp.buf.code_action()<CR>',
     { noremap = true, silent = true, desc = "Actions" })
 vim.keymap.set("n", "<Leader>lw", require('telescope.builtin').lsp_dynamic_workspace_symbols,
     { noremap = true, silent = true, desc = "Find in project" })
-vim.keymap.set('n', '<leader>ls', require('telescope.builtin').lsp_document_symbols,
+vim.keymap.set('n', '<leader>lu', require('telescope.builtin').lsp_document_symbols,
     { desc = 'Document symbols' })
 vim.keymap.set('n', '<Leader>lr', require('telescope.builtin').lsp_references,
     { noremap = true, silent = true, desc = 'LSP references' })
@@ -83,12 +83,15 @@ vim.keymap.set('n', '<Leader>ld', require('telescope.builtin').lsp_definitions,
     { noremap = true, silent = true, desc = 'LSP definition' })
 vim.keymap.set('n', '<Leader>li', require('telescope.builtin').lsp_implementations,
     { noremap = true, silent = true, desc = 'LSP implementation' })
-vim.keymap.set("n", "<leader>lk", "<cmd>lua vim.lsp.buf.hover()<CR>",
+vim.keymap.set("n", "<leader>ls", "<cmd>lua vim.lsp.buf.hover()<CR>",
     { noremap = true, silent = true, desc = "Signature" })
 vim.keymap.set("n", "<Leader>lp", '<Cmd>!pg_format -iLT %<CR>',
     { noremap = true, silent = true, desc = "Format PG SQL" })
 vim.keymap.set("n", "<leader>lf", '<cmd>lua vim.diagnostic.open_float(0, {scope="line"})<CR>',
     { noremap = true, silent = true, desc = "Full diagnostic msg" })
+vim.keymap.set("n", "<leader>lc", '<cmd>lua vim.lsp.buf.rename()<CR>',
+    { noremap = true, silent = true, desc = "Rename" })
+
 
 
 -- Comment
