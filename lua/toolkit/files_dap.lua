@@ -12,6 +12,7 @@ function Find_main_go_file()
     local paths = {
         cwd .. "/src/main.go",
         cwd .. "/cmd/main.go",
+        cwd .. "/internal/main.go",
         cwd .. "/main.go"
     }
 
