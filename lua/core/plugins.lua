@@ -102,4 +102,6 @@ require("lazy").setup({
 
     { 'brenoprata10/nvim-highlight-colors' },
 
+    { "romus204/nvim-float-definition" },
+
 })
