@@ -95,3 +95,10 @@ lspconfig.jsonls.setup {
         autosave(client, bufnr)
     end,
 }
+
+require 'lspconfig'.ts_ls.setup {
+    on_attach = function(client, bufnr)
+        autosave(client, bufnr)
+    end,
+
+}
