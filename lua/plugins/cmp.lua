@@ -42,7 +42,6 @@ cmp.setup({
             { name = 'path' },
             { name = 'emoji' },
             { name = 'nvim_lsp_signature_help' },
-            -- { name = 'rg' },
 
         }
     ),

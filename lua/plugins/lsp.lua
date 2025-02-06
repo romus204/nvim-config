@@ -59,18 +59,6 @@ lspconfig.lua_ls.setup {
     end,
 }
 
-lspconfig.sqls.setup {
-    on_attach = function(client, bufnr)
-        autosave(client, bufnr)
-    end,
-    settings = {
-        sqls = {
-            formatter = "pg_format",
-            connections = {},
-        },
-    },
-}
-
 lspconfig.taplo.setup {
     on_attach = function(client, bufnr)
         autosave(client, bufnr)
@@ -96,7 +84,7 @@ lspconfig.jsonls.setup {
     end,
 }
 
-require 'lspconfig'.ts_ls.setup {
+lspconfig.ts_ls.setup {
     on_attach = function(client, bufnr)
         autosave(client, bufnr)
     end,

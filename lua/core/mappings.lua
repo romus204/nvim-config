@@ -18,7 +18,6 @@ vim.keymap.set('x', '<Down>', '<Nop>', { noremap = true, silent = true })
 vim.keymap.set('x', '<Left>', '<Nop>', { noremap = true, silent = true })
 vim.keymap.set('x', '<Right>', '<Nop>', { noremap = true, silent = true })
 
-vim.keymap.set("n", "<leader>q", ":wqa!<CR>")                               -- quit with save
 vim.keymap.set("n", "<Esc>", ":noh<CR>", { noremap = true, silent = true }) -- reset highlight
 vim.keymap.set("i", "jj", "<Esc>")                                          -- more comfortable esc
 vim.keymap.set("n", "<leader>w", ":wall<CR>")                               -- all save
@@ -26,12 +25,10 @@ vim.keymap.set("n", "<leader>w", ":wall<CR>")                               -- a
 -- NeoTree
 vim.keymap.set("n", "<leader>E", ":Neotree float reveal<CR>")
 vim.keymap.set("n", "<leader>e", ":lua ToggleNeotree()<CR>")
-vim.keymap.set("n", "<leader>o", ":Neotree float git_status<CR>")
 
 -- Tabs
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>")
 vim.keymap.set("n", "<s-Tab>", ":BufferLineCyclePrev<CR>")
-vim.keymap.set("n", "<leader>x", ":BufferLinePickClose<CR>")
 
 -- DAP (Debugging)
 vim.keymap.set("n", "<Leader>dv",
@@ -53,10 +50,15 @@ vim.keymap.set("n", "<Leader>dr", function()
 end
 , { noremap = true, silent = true, desc = "REPL" })
 
+vim.keymap.set("n", "<Leader>dt",
+    '<Cmd>lua require("dapui").toggle()<CR>',
+    { noremap = true, silent = true, desc = "Toggle variables" })
+
+
 vim.keymap.set("n", "<F5>", '<Cmd>lua require"dap".continue()<CR>', { noremap = true, silent = true })
-vim.keymap.set("n", "<F10>", '<Cmd>lua require"dap".step_over()<CR>', { noremap = true, silent = true })
-vim.keymap.set("n", "<F11>", '<Cmd>lua require"dap".step_into()<CR>', { noremap = true, silent = true })
-vim.keymap.set("n", "<F12>", '<Cmd>lua require"dap".step_out()<CR>', { noremap = true, silent = true })
+vim.keymap.set("n", "<F8>", '<Cmd>lua require"dap".step_over()<CR>', { noremap = true, silent = true })
+vim.keymap.set("n", "<F9>", '<Cmd>lua require"dap".step_into()<CR>', { noremap = true, silent = true })
+vim.keymap.set("n", "<F7>", '<Cmd>lua require"dap".step_out()<CR>', { noremap = true, silent = true })
 vim.keymap.set("n",
     "<Leader>b",
     '<Cmd>lua require("dap").toggle_breakpoint()<CR>',
@@ -68,6 +70,7 @@ vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, { des
 vim.keymap.set('n', '<leader>fw', require('telescope.builtin').live_grep, { desc = 'Find words' })
 vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, { desc = 'Opened buffers' })
 vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, { desc = 'Help' })
+vim.keymap.set('n', '<leader>fc', require('telescope.builtin').grep_string, { desc = 'Find current' })
 
 
 -- LSP
@@ -93,16 +96,33 @@ vim.keymap.set("n", "<leader>lc", '<cmd>lua vim.lsp.buf.rename()<CR>',
     { noremap = true, silent = true, desc = "Rename" })
 vim.keymap.set("n", "<leader>lm", "<cmd>lua require('nvim-float-definition').open_definition_in_float()<CR>",
     { noremap = true, silent = true, desc = "Float definition" })
-
+vim.keymap.set('n', '<Leader>le',
+    "<cmd>lua require('telescope.builtin').diagnostics({ severity = vim.diagnostic.severity.ERROR })<CR>",
+    { noremap = true, silent = true, desc = 'Diagnostic ERROR' })
 
 
 -- Comment
 vim.keymap.set('n', '<leader>/', ':CommentToggle<CR>', { noremap = true, silent = true })
 vim.keymap.set('v', '<leader>/', ':CommentToggle<CR>', { noremap = true, silent = true })
 
+
 -- git
 vim.keymap.set('n', '<leader>gb', require('telescope.builtin').git_branches, { desc = 'Branches' })
 vim.keymap.set('n', '<leader>gc', require('telescope.builtin').git_commits, { desc = 'Commits' })
-vim.keymap.set('n', '<leader>gs', require('telescope.builtin').git_status, { desc = 'Status' })
+vim.keymap.set("n", "<leader>gs", ":Neotree float git_status<CR>")
 vim.keymap.set('n', '<leader>go', '<Cmd>Gitsigns blame<CR>', { desc = 'Blame' })
+vim.keymap.set('n', '<leader>gn', '<Cmd>Gitsigns next_hunk<CR>', { desc = 'Next hunk' })
+vim.keymap.set('n', '<leader>gp', '<Cmd>Gitsigns prev_hunk<CR>', { desc = 'Prev hunk' })
 vim.keymap.set('n', '<leader>gh', '<Cmd>Gitsigns preview_hunk_inline<CR>', { desc = 'Preview hunk' })
+vim.keymap.set('n', '<leader>gdc', '<Cmd>DiffviewOpen<CR>', { desc = 'Diff current' })
+vim.keymap.set('n', '<leader>gdp', '<Cmd>DiffviewOpen HEAD~1..HEAD<CR>', { desc = 'Diff 1 pev commit' })
+
+
+-- Closer
+vim.keymap.set('n', '<leader>qt', '<Cmd>tabclose<CR>', { desc = "Close tab" })
+vim.keymap.set('n', '<leader>qo', '<Cmd>BufferLineCloseOthers<CR>', { desc = "Close other buffers" })
+vim.keymap.set('n', '<leader>qw', ':q<CR>', { desc = "Close current window" })
+vim.keymap.set("n", "<leader>qb", ":BufferLinePickClose<CR>")
+
+-- Outline
+vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>", { desc = "Toggle Outline" })

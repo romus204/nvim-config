@@ -1,8 +1,16 @@
-require("nvim-dap-virtual-text").setup()
-
 local dap, dapui = require("dap"), require("dapui")
 
-dapui.setup({})
+dapui.setup({
+    layouts = {
+        {
+            elements = {
+                { id = "scopes", size = 0.5 },
+            },
+            size = 20,
+            position = "bottom",
+        },
+    },
+})
 
 dap.adapters.delve = function(callback, config)
     if config.mode == "remote" and config.request == "attach" then

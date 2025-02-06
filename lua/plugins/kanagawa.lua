@@ -1,5 +1,3 @@
--- Default options:
---
 local palette = {
 
     -- Bg Shades

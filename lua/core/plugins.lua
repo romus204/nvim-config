@@ -96,12 +96,12 @@ require("lazy").setup({
         dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }
     },
 
-    { "theHamsta/nvim-dap-virtual-text" },
-
     { "sindrets/diffview.nvim" },
 
     { 'brenoprata10/nvim-highlight-colors' },
 
     { "romus204/nvim-float-definition" },
+
+    { "hedyhli/outline.nvim" },
 
 })
