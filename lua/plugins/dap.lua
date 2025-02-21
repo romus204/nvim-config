@@ -39,16 +39,7 @@ dap.configurations.go = {
         request = "launch",
         program = Find_main_go_file,
         output = Get_tmp_bin_name,
-        env = function()
-            return Parse_env_file(Find_env_file())
-        end,
-    },
-    {
-        type = "delve",
-        name = "Attach localhost:38697",
-        request = "attach",
-        output = Get_tmp_bin_name,
-    },
+    }
 }
 
 function Set_wrap_in_repl()
