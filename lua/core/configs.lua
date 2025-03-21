@@ -75,3 +75,4 @@ vim.opt.writebackup = true                      -- Keep a backup file while edit
 vim.opt.wildmode = "longest:full,full"          -- Command-line completion mode.
 vim.opt.completeopt = "menuone,longest,preview" -- Settings for completion behavior.
 vim.opt.inccommand = "split"                    -- Show search/replace results incrementally in a split window.
+vim.opt.shortmess:append("I")                   -- Disable welcome message

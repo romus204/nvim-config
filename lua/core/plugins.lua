@@ -33,7 +33,6 @@ require("lazy").setup({
     { 'hrsh7th/vim-vsnip' },
     { 'hrsh7th/cmp-nvim-lsp-signature-help' },
     { 'hrsh7th/cmp-nvim-lsp-document-symbol' },
-    { 'lukas-reineke/cmp-rg' },
 
     { 'lewis6991/gitsigns.nvim' },
 
@@ -49,19 +48,19 @@ require("lazy").setup({
         dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
 
-    {
-        'windwp/nvim-autopairs',
-        event = "InsertEnter",
-        config = true
-    },
+    -- {
+    --     'windwp/nvim-autopairs',
+    --     event = "InsertEnter",
+    --     config = true
+    -- },
 
     { 'terrortylor/nvim-comment' },
 
-    {
-        'glepnir/dashboard-nvim',
-        event = 'VimEnter',
-        dependencies = { { 'nvim-tree/nvim-web-devicons' } }
-    },
+    -- {
+    --     'glepnir/dashboard-nvim',
+    --     event = 'VimEnter',
+    --     dependencies = { { 'nvim-tree/nvim-web-devicons' } }
+    -- },
 
     { "folke/which-key.nvim" },
 
@@ -88,7 +87,6 @@ require("lazy").setup({
 
     {
         "mfussenegger/nvim-dap",
-        commit = "a6070b4e9e9a8ff1bc513c3748eff27080b0f44a"
     },
 
     {
@@ -104,4 +102,10 @@ require("lazy").setup({
 
     { "hedyhli/outline.nvim" },
 
+    {
+        'MeanderingProgrammer/render-markdown.nvim',
+        dependencies = {
+            'nvim-treesitter/nvim-treesitter',
+            'nvim-tree/nvim-web-devicons' },
+    },
 })

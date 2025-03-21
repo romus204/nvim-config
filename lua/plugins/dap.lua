@@ -39,6 +39,7 @@ dap.configurations.go = {
         request = "launch",
         program = Find_main_go_file,
         output = Get_tmp_bin_name,
+        outputMode = "remote",
     }
 }
 
@@ -73,4 +74,10 @@ end
 dap.listeners.before.event_terminated.dapui_config = function()
 end
 dap.listeners.before.event_exited.dapui_config = function()
+end
+
+local types_enabled = false
+function DAPUITypesToggle()
+    types_enabled = not types_enabled
+    dapui.update_render({ max_type_length = types_enabled and -1 or 0 })
 end

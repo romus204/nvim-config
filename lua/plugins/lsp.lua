@@ -23,7 +23,7 @@ lspconfig.gopls.setup({
             analyses = {
                 unusedparams = true,
             },
-            usePlaceholders = true,
+            usePlaceholders = false,
             completeUnimported = true,
             matcher = "fuzzy",
             symbolMatcher = "fuzzy",
@@ -66,12 +66,6 @@ lspconfig.taplo.setup {
 }
 
 lspconfig.bashls.setup {
-    on_attach = function(client, bufnr)
-        autosave(client, bufnr)
-    end,
-}
-
-lspconfig.pyright.setup {
     on_attach = function(client, bufnr)
         autosave(client, bufnr)
     end,

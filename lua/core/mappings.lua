@@ -20,6 +20,7 @@ vim.keymap.set('x', '<Right>', '<Nop>', { noremap = true, silent = true })
 
 vim.keymap.set("n", "<Esc>", ":noh<CR>", { noremap = true, silent = true }) -- reset highlight
 vim.keymap.set("i", "jj", "<Esc>")                                          -- more comfortable esc
+vim.keymap.set("i", "kk", "<Esc>")                                          -- more comfortable esc
 vim.keymap.set("n", "<leader>w", ":wall<CR>")                               -- all save
 
 -- NeoTree
@@ -50,9 +51,13 @@ vim.keymap.set("n", "<Leader>dr", function()
 end
 , { noremap = true, silent = true, desc = "REPL" })
 
-vim.keymap.set("n", "<Leader>dt",
+vim.keymap.set("n", "<Leader>do",
     '<Cmd>lua require("dapui").toggle()<CR>',
     { noremap = true, silent = true, desc = "Toggle variables" })
+
+vim.keymap.set("n", "<Leader>dt",
+    '<Cmd>lua DAPUITypesToggle()<CR>',
+    { noremap = true, silent = true, desc = "Variables" })
 
 
 vim.keymap.set("n", "<F5>", '<Cmd>lua require"dap".continue()<CR>', { noremap = true, silent = true })
@@ -126,3 +131,8 @@ vim.keymap.set("n", "<leader>qb", ":BufferLinePickClose<CR>")
 
 -- Outline
 vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
+
+-- Lsp_signature
+vim.keymap.set('i', '<C-s>', function()
+    require('lsp_signature').toggle_float_win()
+end, { silent = true, noremap = true, desc = 'toggle signature' })
