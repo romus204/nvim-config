@@ -11,11 +11,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {
         "nvim-neo-tree/neo-tree.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons",
-            "MunifTanjim/nui.nvim",
-        }
+        dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" }
     },
 
     { 'nvim-treesitter/nvim-treesitter' },
@@ -26,6 +22,7 @@ require("lazy").setup({
 
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/cmp-buffer' },
+    { 'hrsh7th/cmp-git' },
     { 'hrsh7th/cmp-path' },
     { 'hrsh7th/cmp-cmdline' },
     { 'hrsh7th/nvim-cmp' },
@@ -48,19 +45,7 @@ require("lazy").setup({
         dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
 
-    -- {
-    --     'windwp/nvim-autopairs',
-    --     event = "InsertEnter",
-    --     config = true
-    -- },
-
     { 'terrortylor/nvim-comment' },
-
-    -- {
-    --     'glepnir/dashboard-nvim',
-    --     event = 'VimEnter',
-    --     dependencies = { { 'nvim-tree/nvim-web-devicons' } }
-    -- },
 
     { "folke/which-key.nvim" },
 
@@ -75,8 +60,7 @@ require("lazy").setup({
 
     {
         'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons',
-            'linrongbin16/lsp-progress.nvim' }
+        dependencies = { 'nvim-tree/nvim-web-devicons', 'linrongbin16/lsp-progress.nvim' }
     },
 
     { 'petertriho/nvim-scrollbar' },
@@ -104,8 +88,39 @@ require("lazy").setup({
 
     {
         'MeanderingProgrammer/render-markdown.nvim',
+        dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+    },
+    {
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+    },
+
+    {
+        "rcarriga/nvim-notify",
+    },
+    {
+        "LintaoAmons/bookmarks.nvim",
+        dependencies = { "kkharji/sqlite.lua", "nvim-telescope/telescope.nvim", "stevearc/dressing.nvim" },
+    },
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+    },
+    {
+        'kristijanhusak/vim-dadbod-ui',
         dependencies = {
-            'nvim-treesitter/nvim-treesitter',
-            'nvim-tree/nvim-web-devicons' },
+            { 'tpope/vim-dadbod',                     lazy = true },
+            { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true }, -- Optional
+        },
+        cmd = {
+            'DBUI',
+            'DBUIToggle',
+            'DBUIAddConnection',
+            'DBUIFindBuffer',
+        },
+        init = function()
+            vim.g.db_ui_use_nerd_fonts = 1
+        end,
     },
 })

@@ -18,10 +18,11 @@ vim.keymap.set('x', '<Down>', '<Nop>', { noremap = true, silent = true })
 vim.keymap.set('x', '<Left>', '<Nop>', { noremap = true, silent = true })
 vim.keymap.set('x', '<Right>', '<Nop>', { noremap = true, silent = true })
 
-vim.keymap.set("n", "<Esc>", ":noh<CR>", { noremap = true, silent = true }) -- reset highlight
-vim.keymap.set("i", "jj", "<Esc>")                                          -- more comfortable esc
-vim.keymap.set("i", "kk", "<Esc>")                                          -- more comfortable esc
-vim.keymap.set("n", "<leader>w", ":wall<CR>")                               -- all save
+vim.keymap.set("n", "<Esc>", ":noh<CR>", { noremap = true, silent = true })          -- reset highlight
+vim.keymap.set("i", "jj", "<Esc>")                                                   -- more comfortable esc
+vim.keymap.set("i", "kk", "<Esc>")                                                   -- more comfortable esc
+vim.keymap.set("n", "<leader>ww", ":w<CR>", { silent = true, desc = "Save file" })   -- all save
+vim.keymap.set("n", "<leader>wa", ":wall<CR>", { silent = true, desc = "Save all" }) -- all save
 
 -- NeoTree
 vim.keymap.set("n", "<leader>E", ":Neotree float reveal<CR>")
@@ -136,3 +137,7 @@ vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>", { desc = "Toggle Outline" }
 vim.keymap.set('i', '<C-s>', function()
     require('lsp_signature').toggle_float_win()
 end, { silent = true, noremap = true, desc = 'toggle signature' })
+
+-- Bookmarks
+vim.keymap.set('n', '<leader>mt', '<Cmd>BookmarksTree<CR>', { desc = "Bookmarks tree" })
+vim.keymap.set('n', '<leader>mm', '<Cmd>BookmarksMark<CR>', { desc = "Bookmarks mark" })

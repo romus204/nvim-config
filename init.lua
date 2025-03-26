@@ -1,4 +1,5 @@
 -- Basic config
+require("core.commands")
 require("core.plugins")
 require("core.configs")
 require("core.mappings")
@@ -20,3 +21,6 @@ require("plugins.dap")
 require("plugins.kanagawa")
 require("plugins.color-picker")
 require("plugins.defaults")
+require("plugins.bookmarks")
+require("plugins.autopairs")
+require("plugins.notify")
