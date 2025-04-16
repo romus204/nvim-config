@@ -41,7 +41,6 @@ cmp.setup({
             { name = 'nvim_lsp_signature_help' },
             { name = 'path' },
             { name = 'emoji' },
-            { name = 'nvim_lsp_signature_help' },
 
         }
     ),
@@ -49,13 +48,6 @@ cmp.setup({
     formatting = {
         format = require("nvim-highlight-colors").format
     }
-})
-
-cmp.setup.filetype({ "sql" }, {
-    sources = {
-        { name = "vim-dadbod-completion" },
-        { name = "buffer" },
-    },
 })
 
 cmp.setup.filetype('gitcommit', {
