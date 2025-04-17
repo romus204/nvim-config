@@ -78,3 +78,9 @@ vim.opt.inccommand = "split"                    -- Show search/replace results i
 vim.opt.shortmess:append("I")                   -- Disable welcome message
 
 vim.notify = require("notify")
+
+vim.diagnostic.config({
+    virtual_text = true,
+    virtual_lines = { current_line = true },
+    update_in_insert = true
+})
