@@ -37,7 +37,7 @@ vim.keymap.set("n", "<Leader>dv",
     '<Cmd>lua require("dapui").float_element("scopes", { width = 250, height = 50, enter = true, position = "center"})<CR>',
     { noremap = true, silent = true, desc = "Variables" })
 
-vim.keymap.set("n", "<Leader>db",
+vim.keymap.set("n", "<Leader>dbv",
     '<Cmd>lua require("dapui").float_element("breakpoints", { width = 250, height = 50, enter = true, position = "center"})<CR>',
     { noremap = true, silent = true, desc = "Breakpoints" })
 
@@ -66,7 +66,7 @@ vim.keymap.set("n", "<F8>", '<Cmd>lua require"dap".step_over()<CR>', { noremap =
 vim.keymap.set("n", "<F9>", '<Cmd>lua require"dap".step_into()<CR>', { noremap = true, silent = true })
 vim.keymap.set("n", "<F7>", '<Cmd>lua require"dap".step_out()<CR>', { noremap = true, silent = true })
 vim.keymap.set("n",
-    "<Leader>b",
+    "<Leader>dbt",
     '<Cmd>lua require("dap").toggle_breakpoint()<CR>',
     { noremap = true, silent = true, desc = "Toggle breakpoint" }
 )

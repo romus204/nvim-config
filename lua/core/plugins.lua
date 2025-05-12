@@ -29,6 +29,10 @@ require("lazy").setup({
     { 'hrsh7th/vim-vsnip' },
     { 'hrsh7th/cmp-nvim-lsp-signature-help' },
     { 'hrsh7th/cmp-nvim-lsp-document-symbol' },
+    {
+        'samiulsami/cmp-go-deep',
+        dependencies = { 'kkharji/sqlite.lua' }
+    },
 
     { 'lewis6991/gitsigns.nvim' },
 

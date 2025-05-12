@@ -3,11 +3,13 @@ return {
     filetypes = { "go", "gomod", "gowork", "gotmpl" },
     settings = {
         gopls = {
+            experimentalPostfixCompletions = true,
             staticcheck = true,
             analyses = {
                 unusedparams = true,
+                shadow = true,
             },
-            usePlaceholders = false,
+            usePlaceholders = true,
             completeUnimported = true,
             matcher = "fuzzy",
             symbolMatcher = "fuzzy",
