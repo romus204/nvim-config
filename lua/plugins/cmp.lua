@@ -74,6 +74,17 @@ cmp.setup.filetype('gitcommit', {
     }, { { name = 'buffer' } })
 })
 
+cmp.setup.filetype('sql', {
+    sources = cmp.config.sources({
+        { name = 'vsnip' },
+        { name = 'buffer' },
+        { name = "cmp-dbee" },
+    })
+})
+
+
+
+
 
 cmp.setup.cmdline({ '/', '?' }, {
     mapping = cmp.mapping.preset.cmdline(),

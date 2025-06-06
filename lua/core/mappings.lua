@@ -24,6 +24,11 @@ vim.keymap.set("i", "kk", "<Esc>")                                              
 vim.keymap.set("n", "<leader>ww", ":w<CR>", { silent = true, desc = "Save file" })   -- all save
 vim.keymap.set("n", "<leader>wa", ":wall<CR>", { silent = true, desc = "Save all" }) -- all save
 
+vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
+
 -- NeoTree
 vim.keymap.set("n", "<leader>E", ":Neotree float reveal<CR>")
 vim.keymap.set("n", "<leader>e", ":lua ToggleNeotree()<CR>")
@@ -94,8 +99,8 @@ vim.keymap.set('n', '<Leader>li', require('telescope.builtin').lsp_implementatio
     { noremap = true, silent = true, desc = 'LSP implementation' })
 vim.keymap.set("n", "<leader>ls", "<cmd>lua vim.lsp.buf.hover()<CR>",
     { noremap = true, silent = true, desc = "Signature" })
-vim.keymap.set("n", "<Leader>lp", '<Cmd>!pg_format -iLT %<CR>',
-    { noremap = true, silent = true, desc = "Format PG SQL" })
+-- vim.keymap.set("n", "<Leader>lp", '<Cmd>!pg_format -iLT %<CR>',
+--     { noremap = true, silent = true, desc = "Format PG SQL" })
 vim.keymap.set("n", "<leader>lf", '<cmd>lua vim.diagnostic.open_float(0, {scope="line"})<CR>',
     { noremap = true, silent = true, desc = "Full diagnostic msg" })
 vim.keymap.set("n", "<leader>lc", '<cmd>lua vim.lsp.buf.rename()<CR>',
@@ -105,6 +110,9 @@ vim.keymap.set("n", "<leader>lm", "<cmd>lua require('nvim-float-definition').ope
 vim.keymap.set('n', '<Leader>le',
     "<cmd>lua require('telescope.builtin').diagnostics({ severity = vim.diagnostic.severity.ERROR })<CR>",
     { noremap = true, silent = true, desc = 'Diagnostic ERROR' })
+vim.keymap.set("n", "<leader>lp", "<cmd>lua vim.lsp.buf.format({ async = false })<CR>",
+    { noremap = true, silent = true, desc = "Format code" })
+
 
 
 -- Comment
