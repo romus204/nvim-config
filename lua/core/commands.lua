@@ -25,3 +25,8 @@ vim.api.nvim_create_user_command(
     end,
     { desc = 'Copy file path and line number to clipboard' }
 )
+
+vim.api.nvim_create_user_command('DbeeTab', function()
+    vim.cmd('tabnew')
+    vim.cmd('Dbee')
+end, {})

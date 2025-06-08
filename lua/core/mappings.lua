@@ -29,6 +29,11 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
 
+vim.keymap.set('n', '<C-M-h>', '<C-w>>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-M-j>', '<C-w>-', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-M-k>', '<C-w>+', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-M-l>', '<C-w><', { noremap = true, silent = true })
+
 -- NeoTree
 vim.keymap.set("n", "<leader>E", ":Neotree float reveal<CR>")
 vim.keymap.set("n", "<leader>e", ":lua ToggleNeotree()<CR>")
