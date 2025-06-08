@@ -9,14 +9,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    {
-        "nvim-neo-tree/neo-tree.nvim",
-        dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" }
+    defaults = {
+        lazy = true,
     },
-
-    { 'nvim-treesitter/nvim-treesitter' },
-
-    { "rebelot/kanagawa.nvim" },
 
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/cmp-buffer' },
@@ -29,66 +24,57 @@ require("lazy").setup({
     { 'hrsh7th/vim-vsnip' },
     { 'hrsh7th/cmp-nvim-lsp-signature-help' },
     { 'hrsh7th/cmp-nvim-lsp-document-symbol' },
+    { 'nvim-treesitter/nvim-treesitter' },
+    { 'lewis6991/gitsigns.nvim' },
+    { "williamboman/mason.nvim" },
+    { 'terrortylor/nvim-comment' },
+    { "folke/which-key.nvim" },
+    { 'petertriho/nvim-scrollbar' },
+    { 'RRethy/vim-illuminate' },
+    { "ray-x/lsp_signature.nvim" },
+    { "mfussenegger/nvim-dap" },
+    { "sindrets/diffview.nvim" },
+    { 'brenoprata10/nvim-highlight-colors' },
+    { "romus204/nvim-float-definition" },
+    { "hedyhli/outline.nvim" },
+    { "rcarriga/nvim-notify" },
+
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" }
+    },
+    {
+        "rebelot/kanagawa.nvim",
+        priority = 1000,
+    },
     {
         'samiulsami/cmp-go-deep',
+        ft = "go",
         dependencies = { 'kkharji/sqlite.lua' }
     },
-
-    { 'lewis6991/gitsigns.nvim' },
-
-    { "williamboman/mason.nvim" },
-
     {
         'nvim-telescope/telescope.nvim',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
-
     {
         "akinsho/bufferline.nvim",
         dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
-
-    { 'terrortylor/nvim-comment' },
-
-    { "folke/which-key.nvim" },
-
     {
         "folke/flash.nvim",
-        event = "VeryLazy",
         opts = {},
         keys = {
             { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
         },
     },
-
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons', 'linrongbin16/lsp-progress.nvim' }
     },
-
-    { 'petertriho/nvim-scrollbar' },
-
-    { 'RRethy/vim-illuminate' },
-
-    { "ray-x/lsp_signature.nvim" },
-
-    {
-        "mfussenegger/nvim-dap",
-    },
-
     {
         "rcarriga/nvim-dap-ui",
         dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }
     },
-
-    { "sindrets/diffview.nvim" },
-
-    { 'brenoprata10/nvim-highlight-colors' },
-
-    { "romus204/nvim-float-definition" },
-
-    { "hedyhli/outline.nvim" },
-
     {
         'MeanderingProgrammer/render-markdown.nvim',
         dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
@@ -96,10 +82,6 @@ require("lazy").setup({
     {
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
-    },
-
-    {
-        "rcarriga/nvim-notify",
     },
     {
         "LintaoAmons/bookmarks.nvim",
@@ -128,7 +110,6 @@ require("lazy").setup({
             require("dbee").install()
         end,
     },
-
     {
         "maxandron/goplements.nvim",
         ft = "go",
@@ -141,12 +122,10 @@ require("lazy").setup({
         opts = {
         },
     },
-
     {
         "kdheepak/lazygit.nvim",
         dependencies = {
             "nvim-lua/plenary.nvim",
         },
     },
-
 })

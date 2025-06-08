@@ -8,13 +8,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end
 })
 
--- auto open neo-tree
-vim.api.nvim_create_autocmd("VimEnter", {
-    callback = function()
-        require("neo-tree.command").execute({ position = "left", toggle = true })
-    end
-})
-
 -- copy current file path with number of line
 vim.api.nvim_create_user_command(
     'CopyLinePath',
