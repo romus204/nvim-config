@@ -130,6 +130,7 @@ vim.keymap.set('n', '<leader>gp', '<Cmd>Gitsigns prev_hunk<CR>', { desc = 'Prev 
 vim.keymap.set('n', '<leader>gh', '<Cmd>Gitsigns preview_hunk_inline<CR>', { desc = 'Preview hunk' })
 vim.keymap.set('n', '<leader>gdc', '<Cmd>DiffviewOpen<CR>', { desc = 'Diff current' })
 vim.keymap.set('n', '<leader>gdp', '<Cmd>DiffviewOpen HEAD~1..HEAD<CR>', { desc = 'Diff 1 pev commit' })
+vim.keymap.set('n', '<leader>gl', '<Cmd>LazyGit<CR>', { desc = 'LazyGit' })
 
 
 -- Closer

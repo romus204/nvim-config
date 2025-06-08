@@ -129,8 +129,6 @@ require("lazy").setup({
         end,
     },
 
-
-
     {
         "maxandron/goplements.nvim",
         ft = "go",
@@ -141,6 +139,13 @@ require("lazy").setup({
         "romus204/go-tagger.nvim",
         ft = "go",
         opts = {
+        },
+    },
+
+    {
+        "kdheepak/lazygit.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
         },
     },
 
