@@ -38,6 +38,7 @@ require("lazy").setup({
     { "romus204/nvim-float-definition" },
     { "hedyhli/outline.nvim" },
     { "rcarriga/nvim-notify" },
+    { "romus204/referencer.nvim" },
 
     {
         "nvim-neo-tree/neo-tree.nvim",
