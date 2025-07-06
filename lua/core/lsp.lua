@@ -24,4 +24,4 @@ vim.lsp.config('*', {
 
 })
 
-vim.lsp.enable({ 'gopls', 'luals', 'taplo', 'jsonls', 'tsls', 'bashls', })
+vim.lsp.enable({ 'gopls', 'luals', 'taplo', 'jsonls', 'tsls', 'bashls', 'pyright', "ruff" })
