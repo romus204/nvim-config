@@ -1,89 +1,119 @@
-# Neovim Configuration
+# nvim-config/
 
-Welcome to my Neovim configuration repository! This setup is tailored for a powerful and modern coding experience, featuring a range of plugins for productivity, aesthetics, and extensibility.
+<a href="https://dotfyle.com/romus204/nvim-config"><img src="https://dotfyle.com/romus204/nvim-config/badges/plugins?style=flat" /></a>
+<a href="https://dotfyle.com/romus204/nvim-config"><img src="https://dotfyle.com/romus204/nvim-config/badges/leaderkey?style=flat" /></a>
+<a href="https://dotfyle.com/romus204/nvim-config"><img src="https://dotfyle.com/romus204/nvim-config/badges/plugin-manager?style=flat" /></a>
 
----
 
-## Plugin List
+## Install Instructions
 
-Below is the list of plugins used in this configuration:
+ > Install requires Neovim 0.9+. Always review the code before installing a configuration.
 
-### Files 
-- [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)  
+Clone the repository and install the plugins:
 
-### Colortheme
-- [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim)
+```sh
+git clone git@github.com:romus204/nvim-config ~/.config/romus204/nvim-config
+```
 
-### Highlighting
-- [vim-illuminate](https://github.com/RRethy/vim-illuminate)
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors)
+Open Neovim with this config:
 
-### Language Server and Completion
-- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp):
-- [mason.nvim](https://github.com/williamboman/mason.nvim)
-- [lsp_signature.nvim](https://github.com/ray-x/lsp_signature.nvim)
+```sh
+NVIM_APPNAME=romus204/nvim-config/ nvim
+```
 
-### Git
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [diffview.nvim](https://github.com/sindrets/diffview.nvim)
+## Plugins
 
-### Navigation and Search
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)  
-- [flash.nvim](https://github.com/folke/flash.nvim)
-- [which-key.nvim](https://github.com/folke/which-key.nvim)
+### color
 
-### UI Enhancements
-- [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)  
-- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)  
-- [dashboard-nvim](https://github.com/glepnir/dashboard-nvim)  
-- [nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar)
++ [brenoprata10/nvim-highlight-colors](https://dotfyle.com/plugins/brenoprata10/nvim-highlight-colors)
+### colorscheme
 
-### Productivity
-- [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-- [nvim-comment](https://github.com/terrortylor/nvim-comment)
++ [rebelot/kanagawa.nvim](https://dotfyle.com/plugins/rebelot/kanagawa.nvim)
+### comment
 
-### Debugging
-- [nvim-dap](https://github.com/mfussenegger/nvim-dap)
-- [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)  
-- [nvim-dap-virtual-text](https://github.com/theHamsta/nvim-dap-virtual-text)
++ [terrortylor/nvim-comment](https://dotfyle.com/plugins/terrortylor/nvim-comment)
++ [folke/todo-comments.nvim](https://dotfyle.com/plugins/folke/todo-comments.nvim)
+### completion
 
----
++ [hrsh7th/nvim-cmp](https://dotfyle.com/plugins/hrsh7th/nvim-cmp)
+### cursorline
 
-## Supported Languages
++ [RRethy/vim-illuminate](https://dotfyle.com/plugins/RRethy/vim-illuminate)
+### debugging
 
-- **Go**
-- **Bash**
-- **Lua**
-- **Python**
-- **SQL**
++ [mfussenegger/nvim-dap](https://dotfyle.com/plugins/mfussenegger/nvim-dap)
++ [rcarriga/nvim-dap-ui](https://dotfyle.com/plugins/rcarriga/nvim-dap-ui)
+### editing-support
 
----
++ [windwp/nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
+### file-explorer
 
-## Installation
++ [nvim-neo-tree/neo-tree.nvim](https://dotfyle.com/plugins/nvim-neo-tree/neo-tree.nvim)
+### fuzzy-finder
 
-1. Clone this repository:
-    ```bash
-    git clone https://github.com/romus204/nvim-config.git ~/.config/nvim
-    ```
++ [nvim-telescope/telescope.nvim](https://dotfyle.com/plugins/nvim-telescope/telescope.nvim)
+### git
 
-2. Install [Neovim](https://neovim.io/).
++ [lewis6991/gitsigns.nvim](https://dotfyle.com/plugins/lewis6991/gitsigns.nvim)
++ [kdheepak/lazygit.nvim](https://dotfyle.com/plugins/kdheepak/lazygit.nvim)
++ [sindrets/diffview.nvim](https://dotfyle.com/plugins/sindrets/diffview.nvim)
+### golang
 
-3. Launch Neovim and install plugins:
-    ```bash
-    nvim
-    :Lazy sync
-    ```
++ [maxandron/goplements.nvim](https://dotfyle.com/plugins/maxandron/goplements.nvim)
++ [romus204/go-tagger.nvim](https://dotfyle.com/plugins/romus204/go-tagger.nvim)
+### icon
 
----
++ [nvim-tree/nvim-web-devicons](https://dotfyle.com/plugins/nvim-tree/nvim-web-devicons)
+### keybinding
 
-## Screenshots
++ [folke/which-key.nvim](https://dotfyle.com/plugins/folke/which-key.nvim)
+### lsp
 
----
++ [linrongbin16/lsp-progress.nvim](https://dotfyle.com/plugins/linrongbin16/lsp-progress.nvim)
++ [ray-x/lsp_signature.nvim](https://dotfyle.com/plugins/ray-x/lsp_signature.nvim)
++ [hedyhli/outline.nvim](https://dotfyle.com/plugins/hedyhli/outline.nvim)
++ [romus204/referencer.nvim](https://dotfyle.com/plugins/romus204/referencer.nvim)
+### lsp-installer
 
-## Contributions
++ [williamboman/mason.nvim](https://dotfyle.com/plugins/williamboman/mason.nvim)
+### markdown-and-latex
 
-Feel free to open issues or submit pull requests to improve this configuration.
++ [MeanderingProgrammer/render-markdown.nvim](https://dotfyle.com/plugins/MeanderingProgrammer/render-markdown.nvim)
+### marks
 
----
++ [LintaoAmons/bookmarks.nvim](https://dotfyle.com/plugins/LintaoAmons/bookmarks.nvim)
+### motion
+
++ [folke/flash.nvim](https://dotfyle.com/plugins/folke/flash.nvim)
+### nvim-dev
+
++ [nvim-lua/plenary.nvim](https://dotfyle.com/plugins/nvim-lua/plenary.nvim)
++ [kkharji/sqlite.lua](https://dotfyle.com/plugins/kkharji/sqlite.lua)
++ [MunifTanjim/nui.nvim](https://dotfyle.com/plugins/MunifTanjim/nui.nvim)
+### plugin-manager
+
++ [folke/lazy.nvim](https://dotfyle.com/plugins/folke/lazy.nvim)
+### scrollbar
+
++ [petertriho/nvim-scrollbar](https://dotfyle.com/plugins/petertriho/nvim-scrollbar)
+### statusline
+
++ [nvim-lualine/lualine.nvim](https://dotfyle.com/plugins/nvim-lualine/lualine.nvim)
+### syntax
+
++ [nvim-treesitter/nvim-treesitter](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter)
+### tabline
+
++ [akinsho/bufferline.nvim](https://dotfyle.com/plugins/akinsho/bufferline.nvim)
+### utility
+
++ [rcarriga/nvim-notify](https://dotfyle.com/plugins/rcarriga/nvim-notify)
++ [stevearc/dressing.nvim](https://dotfyle.com/plugins/stevearc/dressing.nvim)
+## Language Servers
+
++ bashls
++ gopls
++ jsonls
++ taplo
++ tsls
++ luals
