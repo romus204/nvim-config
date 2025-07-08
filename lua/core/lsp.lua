@@ -17,7 +17,7 @@ vim.lsp.config('*', {
     root_markers = { "go.work", "go.mod", ".git", ".luarc.json", ".luarc.jsonc", 'tsconfig.json', 'jsconfig.json', 'package.json', },
     capabilities = capabilities,
     on_attach = function(client, bufnr)
-        autosave(client, bufnr)
+        -- autosave(client, bufnr)
         require("lsp_signature").on_attach({}, bufnr)
     end,
 
