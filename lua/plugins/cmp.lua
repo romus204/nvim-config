@@ -59,7 +59,6 @@ cmp.setup({
             { name = 'emoji' },
             { name = 'nvim_lua' },
             { name = 'go_deep' },
-
         }
     ),
 
@@ -82,9 +81,13 @@ cmp.setup.filetype('sql', {
     })
 })
 
-
-
-
+cmp.setup.filetype('codecompanion', {
+    sources = cmp.config.sources({
+        { name = 'codecompanion' },
+    }, {
+        { name = 'buffer' },
+    })
+})
 
 cmp.setup.cmdline({ '/', '?' }, {
     mapping = cmp.mapping.preset.cmdline(),
