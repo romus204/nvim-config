@@ -23,6 +23,10 @@ NVIM_APPNAME=romus204/nvim-config/ nvim
 
 ## Plugins
 
+### ai
+
++ [olimorris/codecompanion.nvim](https://dotfyle.com/plugins/olimorris/codecompanion.nvim)
+
 ### color
 
 + [brenoprata10/nvim-highlight-colors](https://dotfyle.com/plugins/brenoprata10/nvim-highlight-colors)
@@ -57,6 +61,7 @@ NVIM_APPNAME=romus204/nvim-config/ nvim
 + [lewis6991/gitsigns.nvim](https://dotfyle.com/plugins/lewis6991/gitsigns.nvim)
 + [kdheepak/lazygit.nvim](https://dotfyle.com/plugins/kdheepak/lazygit.nvim)
 + [sindrets/diffview.nvim](https://dotfyle.com/plugins/sindrets/diffview.nvim)
++ [echasnovski/mini.diff](https://dotfyle.com/plugins/echasnovski/mini.diff)
 ### golang
 
 + [maxandron/goplements.nvim](https://dotfyle.com/plugins/maxandron/goplements.nvim)
