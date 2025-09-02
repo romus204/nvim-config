@@ -18,14 +18,17 @@ local ollama_adapter = function()
 end
 
 require("codecompanion").setup({
+    opts = {
+        language = 'Russian',
+    },
     adapters = {
         gemini = gemini_adapter,
         ollama = ollama_adapter,
     },
     strategies = {
-        chat = { adapter = "ollama" },
-        inline = { adapter = "ollama" },
-        agent = { adapter = "ollama" },
-        cmd = { adapter = "ollama" },
+        chat = { adapter = "gemini" },
+        inline = { adapter = "gemini" },
+        agent = { adapter = "gemini" },
+        cmd = { adapter = "gemini" },
     },
 })
