@@ -22,8 +22,10 @@ require("codecompanion").setup({
         language = 'Russian',
     },
     adapters = {
-        gemini = gemini_adapter,
-        ollama = ollama_adapter,
+        http = {
+            gemini = gemini_adapter,
+            ollama = ollama_adapter,
+        }
     },
     strategies = {
         chat = { adapter = "gemini" },
