@@ -24,6 +24,9 @@ vim.keymap.set("i", "kk", "<Esc>")                                              
 vim.keymap.set("n", "<leader>ww", ":w<CR>", { silent = true, desc = "Save file" })   -- all save
 vim.keymap.set("n", "<leader>wa", ":wall<CR>", { silent = true, desc = "Save all" }) -- all save
 
+vim.keymap.set("n", "<leader>u", ":bufdo e<CR>", { silent = true, desc = "Save file" })   -- all save
+
+
 vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
@@ -43,31 +46,8 @@ vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>")
 vim.keymap.set("n", "<s-Tab>", ":BufferLineCyclePrev<CR>")
 
 -- DAP (Debugging)
-vim.keymap.set("n", "<Leader>dv",
-    '<Cmd>lua require("dapui").float_element("scopes", { width = 250, height = 50, enter = true, position = "center"})<CR>',
-    { noremap = true, silent = true, desc = "Variables" })
-
-vim.keymap.set("n", "<Leader>dbv",
-    '<Cmd>lua require("dapui").float_element("breakpoints", { width = 250, height = 50, enter = true, position = "center"})<CR>',
-    { noremap = true, silent = true, desc = "Breakpoints" })
-
-vim.keymap.set("n", "<Leader>ds",
-    '<Cmd>lua require("dapui").float_element("stacks", { width = 250, height = 50, enter = true, position = "center"})<CR>',
-    { noremap = true, silent = true, desc = "Stack" })
-vim.keymap.set("n", "<Leader>dr", function()
-    require("dapui").float_element("repl", { width = 250, height = 50, enter = true, position = "center" })
-    vim.defer_fn(function()
-        Set_wrap_in_repl()
-    end, 500) --delay 500ms
-end
-, { noremap = true, silent = true, desc = "REPL" })
-
-vim.keymap.set("n", "<Leader>do",
-    '<Cmd>lua require("dapui").toggle()<CR>',
-    { noremap = true, silent = true, desc = "Toggle variables" })
-
 vim.keymap.set("n", "<Leader>dt",
-    '<Cmd>lua DAPUITypesToggle()<CR>',
+    '<Cmd>DapViewToggle<CR>',
     { noremap = true, silent = true, desc = "Variables" })
 
 
@@ -87,6 +67,7 @@ vim.keymap.set('n', '<leader>fw', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, { desc = 'Opened buffers' })
 vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, { desc = 'Help' })
 vim.keymap.set('n', '<leader>fc', require('telescope.builtin').grep_string, { desc = 'Find current' })
+vim.keymap.set('n', '<leader>fr', '<cmd>Telescope resume<cr>', { desc = 'Resume' })
 
 
 -- LSP
