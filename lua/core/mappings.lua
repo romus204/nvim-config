@@ -87,6 +87,7 @@ vim.keymap.set('n', '<leader>fw', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, { desc = 'Opened buffers' })
 vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, { desc = 'Help' })
 vim.keymap.set('n', '<leader>fc', require('telescope.builtin').grep_string, { desc = 'Find current' })
+vim.keymap.set('n', '<leader>fr', '<cmd>Telescope resume<cr>', { desc = 'Resume' })
 
 
 -- LSP
