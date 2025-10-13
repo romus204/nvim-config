@@ -24,6 +24,9 @@ vim.keymap.set("i", "kk", "<Esc>")                                              
 vim.keymap.set("n", "<leader>ww", ":w<CR>", { silent = true, desc = "Save file" })   -- all save
 vim.keymap.set("n", "<leader>wa", ":wall<CR>", { silent = true, desc = "Save all" }) -- all save
 
+vim.keymap.set("n", "<leader>u", ":bufdo e<CR>", { silent = true, desc = "Save file" })   -- all save
+
+
 vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
