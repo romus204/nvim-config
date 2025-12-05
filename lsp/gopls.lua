@@ -3,6 +3,7 @@ return {
     filetypes = { "go", "gomod", "gowork", "gotmpl" },
     settings = {
         gopls = {
+            buildFlags = { "-tags=integration" },
             staticcheck = true,
             analyses = {
                 unusedparams = true,
