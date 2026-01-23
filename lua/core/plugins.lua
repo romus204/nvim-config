@@ -41,7 +41,9 @@ require("lazy").setup({
     { 'petertriho/nvim-scrollbar' },
     { 'RRethy/vim-illuminate' },
     { "ray-x/lsp_signature.nvim" },
-    { "mfussenegger/nvim-dap" },
+    {
+        "mfussenegger/nvim-dap",
+    },
     { "sindrets/diffview.nvim" },
     { 'brenoprata10/nvim-highlight-colors' },
     { "romus204/nvim-float-definition" },
@@ -80,10 +82,6 @@ require("lazy").setup({
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons', 'linrongbin16/lsp-progress.nvim' }
-    },
-    {
-        "rcarriga/nvim-dap-ui",
-        dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }
     },
     {
         'MeanderingProgrammer/render-markdown.nvim',
