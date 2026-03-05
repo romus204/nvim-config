@@ -85,7 +85,7 @@ require("lazy").setup({
     },
     {
         'MeanderingProgrammer/render-markdown.nvim',
-        ft = { "markdown", "codecompanion" },
+        ft = { "markdown"},
         dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
     },
     {
@@ -137,16 +137,6 @@ require("lazy").setup({
             "nvim-lua/plenary.nvim",
         },
     },
-
-    {
-        "olimorris/codecompanion.nvim",
-        opts = {},
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-treesitter/nvim-treesitter",
-        },
-    },
-
     {
         "echasnovski/mini.diff",
         config = function()
