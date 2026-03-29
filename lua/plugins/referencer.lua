@@ -6,5 +6,5 @@ require("referencer").setup({
     virt_text_pos = "eol",
     color = '#a88654',
     pattern = nil,
-    lsp_servers = { 'gopls', 'pyright',  "typescript-tools"}
+    lsp_servers = { 'gopls', 'pyright',  "tsls"}
 })

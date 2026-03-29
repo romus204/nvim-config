@@ -153,9 +153,4 @@ require("lazy").setup({
         ---@type dapview.Config
         opts = {},
     },
-    {
-        "pmizio/typescript-tools.nvim",
-        dependencies = { "nvim-lua/plenary.nvim"},
-        opts = {},
-    },
 })
