@@ -32,7 +32,8 @@ require("lazy").setup({
     { 'hrsh7th/cmp-nvim-lsp-document-symbol' },
     {
         'nvim-treesitter/nvim-treesitter',
-        branch = 'master'
+        lazy = false,
+        build = ':TSUpdate'
     },
     { 'lewis6991/gitsigns.nvim' },
     { "williamboman/mason.nvim" },
@@ -85,7 +86,7 @@ require("lazy").setup({
     },
     {
         'MeanderingProgrammer/render-markdown.nvim',
-        ft = { "markdown"},
+        ft = { "markdown" },
         dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
     },
     {
