@@ -9,7 +9,6 @@ require('toolkit.generate')
 require('toolkit.files_dap')
 require('toolkit.env')
 -- Plugins config
-require("plugins.treesitter")
 require("plugins.neotree")
 require("plugins.cmp")
 require("plugins.telescope")

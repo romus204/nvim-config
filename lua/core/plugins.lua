@@ -31,9 +31,11 @@ require("lazy").setup({
     { 'hrsh7th/cmp-nvim-lsp-signature-help' },
     { 'hrsh7th/cmp-nvim-lsp-document-symbol' },
     {
-        'nvim-treesitter/nvim-treesitter',
-        lazy = false,
-        build = ':TSUpdate'
+        "romus204/tree-sitter-manager.nvim",
+        config = function()
+            require("tree-sitter-manager").setup({
+            })
+        end
     },
     { 'lewis6991/gitsigns.nvim' },
     { "williamboman/mason.nvim" },
