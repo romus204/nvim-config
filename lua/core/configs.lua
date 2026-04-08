@@ -86,3 +86,5 @@ vim.diagnostic.config({
 })
 
 vim.opt.autoread = true
+
+require('vim._core.ui2').enable({})
