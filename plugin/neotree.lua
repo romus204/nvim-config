@@ -1,3 +1,11 @@
+vim.pack.add({
+    "https://github.com/nvim-lua/plenary.nvim",
+    "https://github.com/nvim-tree/nvim-web-devicons",
+    "https://github.com/MunifTanjim/nui.nvim",
+
+    "https://github.com/nvim-neo-tree/neo-tree.nvim",
+})
+
 vim.fn.sign_define("DiagnosticSignError",
     { text = " ", texthl = "DiagnosticSignError" })
 vim.fn.sign_define("DiagnosticSignWarn",
@@ -22,3 +30,8 @@ function ToggleNeotree() -- focus to Neotree and Buffer
         vim.cmd("Neotree focus")
     end
 end
+
+vim.keymap.set("n", "<leader>E", ":Neotree float reveal<CR>")
+vim.keymap.set("n", "<leader>e", ":lua ToggleNeotree()<CR>")
+vim.keymap.set("n", "<leader>gs", ":Neotree float git_status<CR>")
+

@@ -9,7 +9,6 @@ vim.wo.signcolumn = "yes"    -- Always show the sign column (e.g., for diagnosti
 vim.wo.linebreak = true      -- Wrap lines at word boundaries instead of cutting words.
 
 -- Filetype and Formatting
-vim.g.did_load_filetypes = 1 -- Skip the default filetype loading for faster startup.
 vim.g.formatoptions = "qrn1" -- Set format options for auto-wrapping and other behaviors.
 
 -- Update and Mode Settings
@@ -77,7 +76,6 @@ vim.opt.completeopt = "menuone,longest,preview" -- Settings for completion behav
 vim.opt.inccommand = "split"                    -- Show search/replace results incrementally in a split window.
 vim.opt.shortmess:append("I")                   -- Disable welcome message
 
-vim.notify = require("notify")
 
 vim.diagnostic.config({
     virtual_text = true,

@@ -1,3 +1,7 @@
+vim.pack.add({
+    "https://github.com/romus204/referencer.nvim",
+})
+
 require("referencer").setup({
     enable = true,
     format = "  %d refs",
@@ -6,5 +10,5 @@ require("referencer").setup({
     virt_text_pos = "eol",
     color = '#a88654',
     pattern = nil,
-    lsp_servers = { 'gopls', 'pyright',  "tsls"}
+    lsp_servers = { 'gopls', 'pyright', "tsls" }
 })

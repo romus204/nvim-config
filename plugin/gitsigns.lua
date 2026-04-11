@@ -1,3 +1,7 @@
+vim.pack.add({
+    "https://github.com/lewis6991/gitsigns.nvim",
+})
+
 require('gitsigns').setup {
     signs                        = {
         add          = { text = '┃' },
@@ -49,3 +53,8 @@ require('gitsigns').setup {
     },
 }
 
+
+vim.keymap.set('n', '<leader>go', '<Cmd>Gitsigns blame<CR>', { desc = 'Blame' })
+vim.keymap.set('n', '<leader>gn', '<Cmd>Gitsigns next_hunk<CR>', { desc = 'Next hunk' })
+vim.keymap.set('n', '<leader>gp', '<Cmd>Gitsigns prev_hunk<CR>', { desc = 'Prev hunk' })
+vim.keymap.set('n', '<leader>gh', '<Cmd>Gitsigns preview_hunk_inline<CR>', { desc = 'Preview hunk' })

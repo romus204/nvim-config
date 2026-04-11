@@ -1,3 +1,7 @@
+vim.pack.add({
+    "https://github.com/mfussenegger/nvim-dap",
+})
+
 local dap = require("dap")
 
 require("dap").set_log_level("DEBUG")
