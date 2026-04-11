@@ -81,14 +81,6 @@ cmp.setup.filetype('sql', {
     })
 })
 
-cmp.setup.filetype('codecompanion', {
-    sources = cmp.config.sources({
-        { name = 'codecompanion' },
-    }, {
-        { name = 'buffer' },
-    })
-})
-
 cmp.setup.cmdline({ '/', '?' }, {
     mapping = cmp.mapping.preset.cmdline(),
     sources = { { name = 'buffer', { name = 'nvim_lsp_document_symbol' },
