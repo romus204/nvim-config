@@ -1,8 +1,0 @@
-require("dap-view").setup({
-    winbar = {
-        sections = { "scopes", "breakpoints", "threads", "repl" },
-        default_section = "repl",
-    },
-    switchbuf = "uselast",
-    auto_toggle = true,
-})

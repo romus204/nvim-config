@@ -1,3 +1,9 @@
+vim.pack.add({
+    "https://github.com/nvim-tree/nvim-web-devicons",
+
+    "https://github.com/akinsho/bufferline.nvim",
+})
+
 require("bufferline").setup {
     options = {
         mode = 'buffers',
@@ -16,3 +22,9 @@ require("bufferline").setup {
         },
     }
 }
+
+vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>")
+vim.keymap.set("n", "<s-Tab>", ":BufferLineCyclePrev<CR>")
+vim.keymap.set('n', '<leader>qo', ":BufferLineCloseOthers<CR>", { desc = "Close other buffers" })
+vim.keymap.set("n", "<leader>qb", ":BufferLinePickClose<CR>")
+

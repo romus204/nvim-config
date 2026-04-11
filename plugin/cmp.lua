@@ -1,3 +1,21 @@
+vim.pack.add({
+    "kkharji/sqlite.lua",
+    "https://github.com/brenoprata10/nvim-highlight-colors",
+
+    "https://github.com/hrsh7th/cmp-nvim-lsp",
+    "https://github.com/hrsh7th/cmp-buffer",
+    "https://github.com/hrsh7th/cmp-git",
+    "https://github.com/hrsh7th/cmp-path",
+    "https://github.com/hrsh7th/cmp-cmdline",
+    "https://github.com/hrsh7th/nvim-cmp",
+    "https://github.com/hrsh7th/cmp-nvim-lua",
+    "https://github.com/hrsh7th/cmp-vsnip",
+    "https://github.com/hrsh7th/vim-vsnip",
+    "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help",
+    "https://github.com/hrsh7th/cmp-nvim-lsp-document-symbol",
+    "https://github.com/samiulsami/cmp-go-deep",
+})
+
 local has_words_before = function()
     unpack = unpack or table.unpack
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))
