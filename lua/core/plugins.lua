@@ -105,24 +105,6 @@ require("lazy").setup({
         config = true
     },
     {
-        "romus204/nvim-dbee",
-        -- branch = "feature/edit_clickhouse_driver",
-        dependencies = {
-            "MunifTanjim/nui.nvim",
-            {
-                "MattiasMTS/cmp-dbee",
-                ft = "sql", -- optional but good to have
-                opts = {},  -- needed
-            }
-        },
-        build = function()
-            -- Install tries to automatically detect the install method.
-            -- if it fails, try calling it with one of these parameters:
-            --    "curl", "wget", "bitsadmin", "go"
-            require("dbee").install()
-        end,
-    },
-    {
         "maxandron/goplements.nvim",
         ft = "go",
         opts = {
