@@ -86,7 +86,7 @@
     },
     "lsp_signature.nvim": {
       "rev": "a65b38f260cc3470a05b4afb84c8d868617d476d",
-      "src": "ssh://git@github.com/ray-x/lsp_signature.nvim"
+      "src": "https://github.com/ray-x/lsp_signature.nvim"
     },
     "lualine.nvim": {
       "rev": "a905eeebc4e63fdc48b5135d3bf8aea5618fb21c",
