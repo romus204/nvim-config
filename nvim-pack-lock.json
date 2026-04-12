@@ -125,7 +125,7 @@
       "src": "https://github.com/mfussenegger/nvim-dap"
     },
     "nvim-dap-view": {
-      "rev": "64e2d57788ef93469af1e0319311f669a3126cd3",
+      "rev": "e44892210cfa98d23bf22b82b345213d742b9bee",
       "src": "https://github.com/igorlfs/nvim-dap-view"
     },
     "nvim-float-definition": {
@@ -173,7 +173,7 @@
       "src": "https://github.com/folke/todo-comments.nvim"
     },
     "tree-sitter-manager.nvim": {
-      "rev": "3bcd05d99f9f2916ea6dbc23c8a2ac449fa4bb3c",
+      "rev": "34ba21e9c217c8297b3edb8c97ba4e98b6f6a0a4",
       "src": "https://github.com/romus204/tree-sitter-manager.nvim"
     },
     "vim-illuminate": {
