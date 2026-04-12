@@ -30,7 +30,6 @@ vim.keymap.set('n', '<C-M-j>', '<C-w>-', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-M-k>', '<C-w>+', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-M-l>', '<C-w><', { noremap = true, silent = true })
 
-
 -- LSP
 vim.keymap.set("n", "<Leader>la", '<Cmd>lua vim.lsp.buf.code_action()<CR>',
     { noremap = true, silent = true, desc = "Actions" })
