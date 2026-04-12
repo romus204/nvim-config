@@ -3,8 +3,6 @@ vim.opt.number = true         -- Show absolute line numbers.
 vim.opt.relativenumber = true -- Show relative line numbers.
 
 -- Window Options (local to the current window)
-vim.wo.number = true         -- Display absolute line numbers in the current window.
-vim.wo.relativenumber = true -- Display relative line numbers in the current window.
 vim.wo.signcolumn = "yes"    -- Always show the sign column (e.g., for diagnostics, breakpoints).
 vim.wo.linebreak = true      -- Wrap lines at word boundaries instead of cutting words.
 
@@ -22,12 +20,10 @@ vim.opt.wrap = false  -- Disable line wrapping.
 -- Cursor and Editing
 vim.opt.virtualedit = "block" -- Allow the cursor to move anywhere in visual block mode.
 vim.opt.undofile = true       -- Enable persistent undo (undo changes after reopening the file).
-vim.opt.shell = "/bin/zsh"    -- Set the default shell for terminal commands.
 
 -- Mouse Settings
 vim.opt.mouse = "a"           -- Enable mouse usage in all modes.
-vim.opt.mousefocus = true     -- Automatically focus windows when the mouse hovers over them.
-vim.opt.mousemoveevent = true -- Enable mouse move events (useful for plugins).
+-- vim.opt.mousemoveevent = true -- Enable mouse move events (useful for plugins).
 
 -- Splits (window behavior)
 vim.opt.splitbelow = true -- Horizontal splits open below the current window.
@@ -79,8 +75,8 @@ vim.opt.shortmess:append("I")                   -- Disable welcome message
 
 vim.diagnostic.config({
     virtual_text = true,
-    virtual_lines = { current_line = true },
-    update_in_insert = true
+    -- virtual_lines = { current_line = true },
+    -- update_in_insert = true
 })
 
 vim.opt.autoread = true
