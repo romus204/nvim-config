@@ -7,4 +7,5 @@ vim.lsp.enable({
     'pyright',
     "ruff",
     "eslint",
+    "yamlls",
     "tsls" })
