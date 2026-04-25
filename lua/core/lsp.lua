@@ -9,3 +9,5 @@ vim.lsp.enable({
     "eslint",
     "yamlls",
     "tsls" })
+
+vim.lsp.codelens.enable(true)
