@@ -1,5 +1,5 @@
 vim.pack.add({
-    "https://github.com/sindrets/diffview.nvim",
+    "https://github.com/dlyongemallo/diffview.nvim",
 })
 
 vim.keymap.set('n', '<leader>gdc', '<Cmd>DiffviewOpen<CR>', { desc = 'Diff current' })
