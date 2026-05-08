@@ -4,7 +4,7 @@ vim.pack.add({
 
 vim.lsp.enable({
     'gopls',
-    'luals',
+    'lua_ls',
     'taplo',
     'jsonls',
     'bashls',
@@ -12,6 +12,6 @@ vim.lsp.enable({
     "ruff",
     "eslint",
     "yamlls",
-    "tsls" })
+    "ts_ls" })
 
 vim.lsp.codelens.enable(true)
