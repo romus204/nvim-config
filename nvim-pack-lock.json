@@ -1,5 +1,14 @@
 {
   "plugins": {
+    "blink.cmp": {
+      "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
+      "src": "https://github.com/saghen/blink.cmp",
+      "version": "'v1'"
+    },
+    "blink.compat": {
+      "rev": "1454f14a8d855a578ceeba77c62538fa1459a67c",
+      "src": "https://github.com/saghen/blink.compat"
+    },
     "bookmarks.nvim": {
       "rev": "6d39685485bfb95e6e8cd3441ff156562ff6fe59",
       "src": "https://github.com/LintaoAmons/bookmarks.nvim"
