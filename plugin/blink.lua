@@ -28,15 +28,11 @@ require('blink.cmp').setup({
             border = "bold",
             min_width = 25,
             max_height = 15,
+            scrollbar = false,
         },
-        trigger = {
-            -- show_on_backspace = true,
-            -- show_on_backspace_in_keyword = true,
-        },
-
-        list = {
-            max_items = 300
-        }
+    },
+    cmdline = {
+        completion = { menu = { auto_show = true } },
     },
 
     sources = {
