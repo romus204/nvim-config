@@ -39,7 +39,8 @@ vim.keymap.set("n", "<leader>lf", '<cmd>lua vim.diagnostic.open_float(0, {scope=
     { noremap = true, silent = true, desc = "Full diagnostic msg" })
 vim.keymap.set("n", "<leader>lc", '<cmd>lua vim.lsp.buf.rename()<CR>',
     { noremap = true, silent = true, desc = "Rename" })
-vim.keymap.set("n", "<leader>lp", "<cmd>lua vim.lsp.buf.format({ async = false })<CR>",
+vim.keymap.set("n", "<leader>lp",
+    '<cmd>lua vim.lsp.buf.format {filter = function(client) return client.name ~= "ts_ls" end}<CR>',
     { noremap = true, silent = true, desc = "Format code" })
 
 -- Close

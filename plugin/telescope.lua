@@ -53,7 +53,7 @@ vim.keymap.set('n', '<leader>gb', require('telescope.builtin').git_branches, { d
 vim.keymap.set('n', '<leader>gc', require('telescope.builtin').git_commits, { desc = 'Commits' })
 
 vim.keymap.set('n', '<Leader>le',
-    "<cmd>lua require('telescope.builtin').diagnostics({ severity = vim.diagnostic.severity.ERROR })<CR>",
+    "<cmd>lua require('telescope.builtin').diagnostics({ severity = vim.diagnostic.severity.ERROR, root_dir = true})<CR>",
     { noremap = true, silent = true, desc = 'Diagnostic ERROR' })
 
 vim.keymap.set("n", "<Leader>lw", require('telescope.builtin').lsp_dynamic_workspace_symbols,
