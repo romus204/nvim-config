@@ -33,6 +33,9 @@ require('blink.cmp').setup({
     },
     cmdline = {
         completion = { menu = { auto_show = true } },
+        keymap = {
+            ['<CR>'] = { 'select_and_accept', 'fallback' },
+        }
     },
 
     sources = {
@@ -42,7 +45,7 @@ require('blink.cmp').setup({
                 name = "go_deep",
                 module = "blink.compat.source",
                 min_keyword_length = 3,
-                max_items = 10,
+                max_items = 5,
                 ---@module "cmp_go_deep"
                 ---@type cmp_go_deep.Options
                 opts = {
@@ -70,11 +73,11 @@ require('blink.cmp').setup({
                     -- Whether to exclude internal packages that cannot be imported.
                     -- Follows Go's internal package rule: code can only import from "internal"
                     -- if it's in a subtree rooted at the parent of "internal".
-                    exclude_internal_packages = false,
+                    exclude_internal_packages = true,
 
                     -- Timeout in milliseconds for fetching documentation.
                     -- Controls how long to wait for documentation to load.
-                    documentation_wait_timeout_ms = 1000,
+                    documentation_wait_timeout_ms = 100,
 
                     -- Maximum time (in milliseconds) to wait before "locking-in" the current request and sending it to gopls.
                     debounce_gopls_requests_ms = 0,
@@ -91,3 +94,7 @@ require('blink.cmp').setup({
         implementation = "prefer_rust_with_warning"
     }
 })
+
+vim.api.nvim_set_hl(0, "BlinkCmpMenu", {bg = "#262626",})
+vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", {bg = "#262626",})
+vim.api.nvim_set_hl(0, "BlinkCmpMenuSelection", {bg = "#454545",})
