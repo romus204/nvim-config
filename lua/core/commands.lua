@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 
 -- copy current file path with number of line
 vim.api.nvim_create_user_command(
-    'CopyLinePath',
+    'CopyFilePath',
     function()
         local path = vim.fn.expand('%:p:h') .. '/' .. vim.fn.expand('%:t') .. ':' .. vim.fn.line('.')
         vim.fn.setreg('+', path)
