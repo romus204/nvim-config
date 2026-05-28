@@ -10,7 +10,7 @@
       "src": "https://github.com/saghen/blink.compat"
     },
     "bookmarks.nvim": {
-      "rev": "6d39685485bfb95e6e8cd3441ff156562ff6fe59",
+      "rev": "230da0acf7645da4f066bd93f1fd490a5660cd11",
       "src": "https://github.com/LintaoAmons/bookmarks.nvim"
     },
     "bufferline.nvim": {
@@ -69,10 +69,6 @@
       "rev": "fcea7ff883235d9024dc41e638f164a450c14ca2",
       "src": "https://github.com/folke/flash.nvim"
     },
-    "gitlab.nvim": {
-      "rev": "9c9fc89ba581482375b325ac9d474baf3a07755f",
-      "src": "https://github.com/harrisoncramer/gitlab.nvim"
-    },
     "gitsigns.nvim": {
       "rev": "dd3f588bacbeb041be6facf1742e42097f62165d",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
@@ -114,7 +110,7 @@
       "src": "https://github.com/echasnovski/mini.diff"
     },
     "neo-tree.nvim": {
-      "rev": "722a182f6608172bdc3fd295b6180e583316ef1d",
+      "rev": "2734f5cf4c59e79bbcc4521eb8d1e26fd305ad3c",
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim"
     },
     "nui.nvim": {
@@ -139,7 +135,7 @@
       "version": "'force-restart'"
     },
     "nvim-dap-view": {
-      "rev": "df0b12000776d75c8d9518a1ca220377ea69cd7d",
+      "rev": "a03a085b020197f441f6c63383f0cb7321729f6e",
       "src": "https://github.com/igorlfs/nvim-dap-view"
     },
     "nvim-float-definition": {
@@ -151,7 +147,7 @@
       "src": "https://github.com/brenoprata10/nvim-highlight-colors"
     },
     "nvim-lspconfig": {
-      "rev": "a4ed4e761c400849e8c9f8bda33e5083f890268c",
+      "rev": "6f76a3eeadc2ee235d74cd7d5319e95a261084af",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-notify": {
@@ -159,7 +155,7 @@
       "src": "https://github.com/rcarriga/nvim-notify"
     },
     "nvim-web-devicons": {
-      "rev": "0d7d35fa946837b8738b17c18d1faa1ac351e7f9",
+      "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "outline.nvim": {
