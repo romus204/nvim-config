@@ -1,5 +1,8 @@
 vim.pack.add({
-    "https://github.com/mfussenegger/nvim-dap",
+    {
+        src = "https://github.com/romus204/nvim-dap",
+        version = "force-restart",
+    },
 
     "https://github.com/igorlfs/nvim-dap-view",
 })
@@ -8,6 +11,10 @@ require("dap-view").setup({
     winbar = {
         sections = { "scopes", "breakpoints", "threads", "repl" },
         default_section = "repl",
+    },
+    virtual_text = {
+        enabled = true,
+        position = "eol",
     },
     switchbuf = "uselast",
     auto_toggle = true,
@@ -27,4 +34,3 @@ vim.keymap.set("n",
     '<Cmd>lua require("dap").toggle_breakpoint()<CR>',
     { noremap = true, silent = true, desc = "Toggle breakpoint" }
 )
-

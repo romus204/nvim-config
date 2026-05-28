@@ -1,12 +1,15 @@
 vim.pack.add({
-    "https://github.com/mfussenegger/nvim-dap",
+    {
+        src = "https://github.com/romus204/nvim-dap",
+        version = "force-restart",
+    }
 })
 
 local dap = require("dap")
 
 require("dap").set_log_level("DEBUG")
 
-dap.adapters.delve = function(callback, config)
+dap.adapters.go = function(callback, config)
     if config.mode == "remote" and config.request == "attach" then
         callback({
             type = "server",
@@ -58,18 +61,3 @@ function Parse_env_file(filepath) -- Parse env file to table
 
     return env_vars
 end
-
-
--- Example
---
--- pcall(vim.cmd.packadd, "nvim-dap")
---
--- require("dap").configurations.go = {
---     {
---         type = "delve",
---         name = "Main",
---         request = "launch",
---         program = main file,
---         outputMode = "remote",
---     }
--- }
