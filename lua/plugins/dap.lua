@@ -1,13 +1,17 @@
 vim.pack.add({
-    {
-        src = "https://github.com/romus204/nvim-dap",
-        version = "force-restart",
-    }
+    "https://github.com/mfussenegger/nvim-dap",
 })
 
 local dap = require("dap")
 
 require("dap").set_log_level("DEBUG")
+
+dap.listeners.after.event_initialized["disable-restart"] = function(session)
+    local capabilities = session.capabilities
+    if capabilities then
+        capabilities.supportsRestartRequest = false
+    end
+end
 
 dap.adapters.go = function(callback, config)
     if config.mode == "remote" and config.request == "attach" then

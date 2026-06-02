@@ -130,9 +130,8 @@
       "src": "https://github.com/terrortylor/nvim-comment"
     },
     "nvim-dap": {
-      "rev": "4a33ccb5b5a3bb09cf748a10d3bea1f3ed7cbd9e",
-      "src": "https://github.com/romus204/nvim-dap",
-      "version": "'force-restart'"
+      "rev": "531771530d4f82ad2d21e436e3cc052d68d7aebb",
+      "src": "https://github.com/mfussenegger/nvim-dap"
     },
     "nvim-dap-view": {
       "rev": "a03a085b020197f441f6c63383f0cb7321729f6e",
