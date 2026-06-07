@@ -6,7 +6,7 @@ vim.pack.add({
 
 require("dap-view").setup({
     winbar = {
-        sections = { "scopes", "breakpoints", "threads", "repl" },
+        sections = { "scopes", "breakpoints", "threads", "repl", "sessions" },
         default_section = "repl",
     },
     virtual_text = {
