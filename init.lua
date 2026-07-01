@@ -7,7 +7,6 @@ require("plugins.kanagawa")
 
 require("plugins.autopairs")
 require("plugins.blink")
-require("plugins.bookmarks")
 require("plugins.buffline")
 require("plugins.dap")
 require("plugins.dap-view")
